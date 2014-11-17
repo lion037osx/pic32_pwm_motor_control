@@ -18,7 +18,8 @@ extern "C" {
 #include <string.h>
 #include "types.h"
 #include "HardwareProfile.h"
-#include "timers.h"
+#include "delays.h"
+
 
 #ifdef	__cplusplus
 }

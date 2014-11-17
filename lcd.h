@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 
+//#define LCD_TMR1
+
 
 #define HLCD    16      // LCD width = 16 characters
 #define VLCD    2       // LCD height = 2 rows

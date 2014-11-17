@@ -1,2 +1,3 @@
 build/default/production/interrups.o:  \
-interrups.c 
+interrups.c  \
+isr.h 

@@ -1,5 +1,5 @@
 #include "spi.h"
-#include "HardwareProfile.h"
+//#include "HardwareProfile.h"
 
 void init_spi(void){
 #ifdef SPI0_ENABLE

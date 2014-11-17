@@ -1,4 +1,3 @@
-build/default/production/UART.o:  \
-UART.c  \
-HardwareProfile.h  \
+build/default/production/uart.o:  \
+uart.c  \
 uart.h 

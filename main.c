@@ -38,7 +38,9 @@
  * Platform: 	Explorer-16 with PIC32MX PIM
  *
  ********************************************************************/
-#include "libraries.h"
+ #include <p32xxxx.h>
+#include <plib.h>
+#include "HardwareProfile.h"
 
 // Configuration Bit settings
 // SYSCLK = 80 MHz (8MHz Crystal/ FPLLIDIV * FPLLMUL / FPLLODIV)
@@ -51,15 +53,32 @@
 #pragma config POSCMOD = HS, FNOSC = PRIPLL, FPBDIV = DIV_8
 #define SYS_FREQ 			(80000000L)
 
-static  uint32_t counter_interrup=0;
+//static  uint32_t counter_interrup=0;
+
 
 int main(void)
 {
 int i;
-    init_config_hardware();
+
     SYSTEMConfig(SYS_FREQ, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
     mJTAGPortEnable(DEBUG_JTAGPORT_OFF);
-
-    while(1);
+    init_config();
+    LED0=1;
+    Delayms(1);
+    LED0=0;
+    LED0=1;
+    clrLCD();
+   Delayms(100);
+    LED0=0;
+    putsLCD( "PIC32 SourceCode\tPWM MotorControl");
+    Delayms(1000);
+    clrLCD();
+    putsLCD( "My Code Demo\tBoard EX16");
+    
+    while(1){
+        Delayms(500);
+        LED0=0;
+        Delayms(500);
+        LED0=1;
+    }
 }
-

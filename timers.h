@@ -15,12 +15,7 @@ extern "C" {
 void init_timer1(void);
 void init_timer2(void);
 void Delay_ms_T1( unsigned t);
-
-
- static void __ISR_SINGLE__ T1Interrupt( void){
-    //clear the interrupt flag
-    mT1ClearIntFlag();
-} //T1Interrupt
+//void Delayms( unsigned t);
 
 
 #ifdef	__cplusplus

@@ -1,17 +1,17 @@
 /* 
- * File:   interrups.h
+ * File:   isr.h
  * Author: leonardoamaya
  *
- * Created on 16 de noviembre de 2014, 18:16
+ * Created on 17 de noviembre de 2014, 1:53
  */
 
-
-#ifndef INTERRUPS_H
-#define	INTERRUPS_H
+#ifndef ISR_H
+#define	ISR_H
 
 #ifdef	__cplusplus
 extern "C" {
 #endif
+
 
 void init_interrup_Timer1(void);
 void init_interrup_Timer2(void);
@@ -50,9 +50,10 @@ void init_interrup_RTCC(void);
 */
 
 
+
 #ifdef	__cplusplus
 }
 #endif
 
-#endif	// INTERRUPS_H
+#endif	/* ISR_H */
 

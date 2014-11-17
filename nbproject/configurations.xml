@@ -9,20 +9,24 @@
                      projectFiles="true">
         <itemPath>eeprom25lc256.h</itemPath>
         <itemPath>lcd.h</itemPath>
+        <itemPath>SST25VF010A.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1"
                      displayName="DevicesInternalSources"
                      projectFiles="true">
-        <itemPath>UART.h</itemPath>
         <itemPath>ButtonsConfig.h</itemPath>
         <itemPath>adc.h</itemPath>
-        <itemPath>interrups.h</itemPath>
         <itemPath>timers.h</itemPath>
         <itemPath>spi.h</itemPath>
+        <itemPath>leds.h</itemPath>
+        <itemPath>delays.h</itemPath>
+        <itemPath>isr.h</itemPath>
+        <itemPath>uart.h</itemPath>
+        <itemPath>sysclock.h</itemPath>
+        <itemPath>ConfigPorts.h</itemPath>
       </logicalFolder>
       <itemPath>HardwareProfile.h</itemPath>
       <itemPath>types.h</itemPath>
-      <itemPath>libraries.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -36,19 +40,22 @@
                      projectFiles="true">
         <itemPath>eeprom25lc256.c</itemPath>
         <itemPath>lcd.c</itemPath>
+        <itemPath>SST25VF010A.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2"
                      displayName="DevicesInternalSource"
                      projectFiles="true">
-        <itemPath>UART.c</itemPath>
         <itemPath>ButtonsConfig.c</itemPath>
         <itemPath>adc.c</itemPath>
         <itemPath>interrups.c</itemPath>
         <itemPath>timers.c</itemPath>
         <itemPath>spi.c</itemPath>
+        <itemPath>leds.c</itemPath>
+        <itemPath>delays.c</itemPath>
+        <itemPath>uart.c</itemPath>
+        <itemPath>ConfigPorts.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
-      <itemPath>HardwareProfile.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

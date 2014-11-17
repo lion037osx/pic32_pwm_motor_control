@@ -2,9 +2,9 @@
 ** UART2 RS232 asynchronous communication code
 */
 
-#include "HardwareProfile.h"
+#include <p32xxxx.h>
+#include <plib.h>
 #include "uart.h"
-//#include "types.h"
 
 #define BACKSPACE 0x20
 
