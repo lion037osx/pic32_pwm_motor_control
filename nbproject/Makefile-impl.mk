@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=pwm_motor_controlPIC32MX
+PROJECTNAME=pic32_pwm_motor_control
 
 # Active Configuration
 DEFAULTCONF=default

@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/pwm_motor_controlPIC32MX.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=pwm_motor_controlPIC32MX.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=pwmmotorcontrolpic32mx/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/pic32_pwm_motor_control.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=pic32_pwm_motor_control.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=pic32pwmmotorcontrol/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/pwmmotorcontrolpic32mx/bin
+makeDirectory ${TMPDIR}/pic32pwmmotorcontrol/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/pwmmotorcontrolpic32mx.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/pic32pwmmotorcontrol.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/pwmmotorcontrolpic32mx.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/pic32pwmmotorcontrol.tar *
 checkReturnCode
 
 # Cleanup

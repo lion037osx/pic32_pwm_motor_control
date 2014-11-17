@@ -60,7 +60,6 @@ int i;
     SYSTEMConfig(SYS_FREQ, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
     mJTAGPortEnable(DEBUG_JTAGPORT_OFF);
 
-    while(1){
-    }
+    while(1);
 }
 
