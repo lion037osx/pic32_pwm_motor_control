@@ -10,7 +10,7 @@ void Delayms( unsigned t){
     while (t--)
     {  // t x 1ms loop
         TMR1 = 0;
-        while (TMR1 < FPB/1000);
+        while (TMR1 < FPB/4000);//TMR1<40000//40000*6us=        
     }
 //#endif
 } // Delayms

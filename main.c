@@ -49,11 +49,10 @@
 // WDT OFF
 // Other options are don't care
 //
+
 #pragma config FPLLMUL = MUL_20, FPLLIDIV = DIV_2, FPLLODIV = DIV_1, FWDTEN = OFF
 #pragma config POSCMOD = HS, FNOSC = PRIPLL, FPBDIV = DIV_8
 #define SYS_FREQ 			(80000000L)
-
-//static  uint32_t counter_interrup=0;
 
 
 int main(void)
@@ -68,13 +67,13 @@ int i;
     LED0=0;
     LED0=1;
     clrLCD();
-   Delayms(100);
+    Delayms(100);
     LED0=0;
     putsLCD( "PIC32 SourceCode\tPWM MotorControl");
     Delayms(1000);
     clrLCD();
     putsLCD( "My Code Demo\tBoard EX16");
-    
+
     while(1){
         Delayms(500);
         LED0=0;

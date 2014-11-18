@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=eeprom25lc256.c lcd.c ButtonsConfig.c adc.c interrups.c timers.c spi.c main.c SST25VF010A.c leds.c delays.c uart.c ConfigPorts.c
+SOURCEFILES_QUOTED_IF_SPACED=eeprom25lc256.c lcd.c SST25VF010A.c ButtonsConfig.c adc.c interrups.c timers.c spi.c leds.c delays.c uart.c ConfigPorts.c main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/eeprom25lc256.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/ButtonsConfig.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/interrups.o ${OBJECTDIR}/timers.o ${OBJECTDIR}/spi.o ${OBJECTDIR}/main.o ${OBJECTDIR}/SST25VF010A.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/delays.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/ConfigPorts.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/eeprom25lc256.o.d ${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/ButtonsConfig.o.d ${OBJECTDIR}/adc.o.d ${OBJECTDIR}/interrups.o.d ${OBJECTDIR}/timers.o.d ${OBJECTDIR}/spi.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/SST25VF010A.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/delays.o.d ${OBJECTDIR}/uart.o.d ${OBJECTDIR}/ConfigPorts.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/eeprom25lc256.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/SST25VF010A.o ${OBJECTDIR}/ButtonsConfig.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/interrups.o ${OBJECTDIR}/timers.o ${OBJECTDIR}/spi.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/delays.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/ConfigPorts.o ${OBJECTDIR}/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/eeprom25lc256.o.d ${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/SST25VF010A.o.d ${OBJECTDIR}/ButtonsConfig.o.d ${OBJECTDIR}/adc.o.d ${OBJECTDIR}/interrups.o.d ${OBJECTDIR}/timers.o.d ${OBJECTDIR}/spi.o.d ${OBJECTDIR}/leds.o.d ${OBJECTDIR}/delays.o.d ${OBJECTDIR}/uart.o.d ${OBJECTDIR}/ConfigPorts.o.d ${OBJECTDIR}/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/eeprom25lc256.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/ButtonsConfig.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/interrups.o ${OBJECTDIR}/timers.o ${OBJECTDIR}/spi.o ${OBJECTDIR}/main.o ${OBJECTDIR}/SST25VF010A.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/delays.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/ConfigPorts.o
+OBJECTFILES=${OBJECTDIR}/eeprom25lc256.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/SST25VF010A.o ${OBJECTDIR}/ButtonsConfig.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/interrups.o ${OBJECTDIR}/timers.o ${OBJECTDIR}/spi.o ${OBJECTDIR}/leds.o ${OBJECTDIR}/delays.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/ConfigPorts.o ${OBJECTDIR}/main.o
 
 # Source Files
-SOURCEFILES=eeprom25lc256.c lcd.c ButtonsConfig.c adc.c interrups.c timers.c spi.c main.c SST25VF010A.c leds.c delays.c uart.c ConfigPorts.c
+SOURCEFILES=eeprom25lc256.c lcd.c SST25VF010A.c ButtonsConfig.c adc.c interrups.c timers.c spi.c leds.c delays.c uart.c ConfigPorts.c main.c
 
 
 CFLAGS=
@@ -106,6 +106,12 @@ ${OBJECTDIR}/lcd.o: lcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/lcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/lcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/lcd.o.d" -o ${OBJECTDIR}/lcd.o lcd.c   
 	
+${OBJECTDIR}/SST25VF010A.o: SST25VF010A.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/SST25VF010A.o.d 
+	@${RM} ${OBJECTDIR}/SST25VF010A.o 
+	@${FIXDEPS} "${OBJECTDIR}/SST25VF010A.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/SST25VF010A.o.d" -o ${OBJECTDIR}/SST25VF010A.o SST25VF010A.c   
+	
 ${OBJECTDIR}/ButtonsConfig.o: ButtonsConfig.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/ButtonsConfig.o.d 
@@ -136,18 +142,6 @@ ${OBJECTDIR}/spi.o: spi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/spi.o 
 	@${FIXDEPS} "${OBJECTDIR}/spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/spi.o.d" -o ${OBJECTDIR}/spi.o spi.c   
 	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c   
-	
-${OBJECTDIR}/SST25VF010A.o: SST25VF010A.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/SST25VF010A.o.d 
-	@${RM} ${OBJECTDIR}/SST25VF010A.o 
-	@${FIXDEPS} "${OBJECTDIR}/SST25VF010A.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/SST25VF010A.o.d" -o ${OBJECTDIR}/SST25VF010A.o SST25VF010A.c   
-	
 ${OBJECTDIR}/leds.o: leds.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/leds.o.d 
@@ -172,6 +166,12 @@ ${OBJECTDIR}/ConfigPorts.o: ConfigPorts.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/ConfigPorts.o 
 	@${FIXDEPS} "${OBJECTDIR}/ConfigPorts.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/ConfigPorts.o.d" -o ${OBJECTDIR}/ConfigPorts.o ConfigPorts.c   
 	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c   
+	
 else
 ${OBJECTDIR}/eeprom25lc256.o: eeprom25lc256.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
@@ -184,6 +184,12 @@ ${OBJECTDIR}/lcd.o: lcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/lcd.o.d 
 	@${RM} ${OBJECTDIR}/lcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/lcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/lcd.o.d" -o ${OBJECTDIR}/lcd.o lcd.c   
+	
+${OBJECTDIR}/SST25VF010A.o: SST25VF010A.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/SST25VF010A.o.d 
+	@${RM} ${OBJECTDIR}/SST25VF010A.o 
+	@${FIXDEPS} "${OBJECTDIR}/SST25VF010A.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/SST25VF010A.o.d" -o ${OBJECTDIR}/SST25VF010A.o SST25VF010A.c   
 	
 ${OBJECTDIR}/ButtonsConfig.o: ButtonsConfig.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
@@ -215,18 +221,6 @@ ${OBJECTDIR}/spi.o: spi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/spi.o 
 	@${FIXDEPS} "${OBJECTDIR}/spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/spi.o.d" -o ${OBJECTDIR}/spi.o spi.c   
 	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c   
-	
-${OBJECTDIR}/SST25VF010A.o: SST25VF010A.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/SST25VF010A.o.d 
-	@${RM} ${OBJECTDIR}/SST25VF010A.o 
-	@${FIXDEPS} "${OBJECTDIR}/SST25VF010A.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/SST25VF010A.o.d" -o ${OBJECTDIR}/SST25VF010A.o SST25VF010A.c   
-	
 ${OBJECTDIR}/leds.o: leds.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/leds.o.d 
@@ -250,6 +244,12 @@ ${OBJECTDIR}/ConfigPorts.o: ConfigPorts.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/ConfigPorts.o.d 
 	@${RM} ${OBJECTDIR}/ConfigPorts.o 
 	@${FIXDEPS} "${OBJECTDIR}/ConfigPorts.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/ConfigPorts.o.d" -o ${OBJECTDIR}/ConfigPorts.o ConfigPorts.c   
+	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c   
 	
 endif
 

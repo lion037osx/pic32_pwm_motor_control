@@ -7,7 +7,7 @@
 #include <p32xxxx.h>
 #include <plib.h>
 #include "lcd.h"
-
+#define LCD_TMR1
 
 #define PMDATA  PMDIN
 
@@ -27,7 +27,8 @@
         T1CON = 0x8030;    // Fpb/2, prescaled 1:256, 6us/tick
 
         // wait for >30ms
-        TMR1 = 0; while( TMR1<6000);// 6000 x 6us = 36ms   
+        TMR1 = 0;
+        while( TMR1<6000);// 6000 x 6us = 36ms
 
         //initiate the HD44780 display 8-bit init sequence
         PMADDR = LCDCMD;            // command register
@@ -63,16 +64,6 @@
         PMADDR = addr;
         PMDATA = c;
     } // writeLCD
-
-    #define putLCD( d)  writeLCD( LCDDATA, (d))
-    #define cmdLCD( c)  writeLCD( LCDCMD, (c))
-
-    void putsLCD( char *s)
-    {
-        while( *s) putLCD( *s++);
-    } //putsLCD
-
-
 
 #else
     #include "timers.h"
@@ -122,7 +113,7 @@
         PMPMasterWrite( c);         // initiate write sequence
     } // writeLCD
 
-
+#endif
     void putsLCD( char *s)
     {
         char c;
@@ -155,7 +146,7 @@
         } //while
     } //putsLCD
 
-#endif
+
 
 
 
